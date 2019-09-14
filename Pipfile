@@ -11,3 +11,6 @@ django = "<1.12"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+start = "python manage.py runserver 0.0.0.0:8000"
