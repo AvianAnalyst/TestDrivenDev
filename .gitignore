@@ -179,3 +179,4 @@ venv.bak/
 .mypy_cache/
 
 /static
+.env
