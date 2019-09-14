@@ -14,4 +14,4 @@ gunicorn = "*"
 python_version = "3.7"
 
 [scripts]
-start = "python manage.py runserver 0.0.0.0:8000"
+start = "gunicorn --bind unix:/tmp/$SITENAME.socket superlists.wsgi:application"
