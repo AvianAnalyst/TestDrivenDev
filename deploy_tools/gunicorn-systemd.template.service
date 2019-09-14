@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn server for DOMAIN
+
+[Service]
+Restart=on-failure
+User=kbyrd
+WorkingDirectory=/home/kbyrd/sites/DOMAIN
+EnvironmentFile=/home/kbyrd/sites/DOMAIN/.env
+
+ExecStart=/home/kbyrd/.local/bin/pipenv run start
+
+[Install]
+WantedBy=multi-user.target
