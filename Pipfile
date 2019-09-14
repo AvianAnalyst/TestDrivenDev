@@ -8,6 +8,7 @@ selenium = "<4"
 
 [packages]
 django = "<1.12"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
