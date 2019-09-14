@@ -14,4 +14,4 @@ gunicorn = "*"
 python_version = "3.7"
 
 [scripts]
-start = "gunicorn --bind unix:/tmp/.sts-staging.aviananalyst.tk.socket superlists.wsgi:application"
+start = "gunicorn --bind unix:/tmp/lists-staging.aviananalyst.tk.socket superlists.wsgi:application"
