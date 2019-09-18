@@ -44,7 +44,7 @@ def deploy(c):
     print('ensure site directory exists')
     c.run(f'mkdir -p {site_folder}')
     print('get current commit')
-    current_commit = c.local("git log -n 1 --format=%h")
+    current_commit = c.local("git log -n 1 --format=%h").stdout.strip()
     print('following commands done in site_folder on remote machine')
     with c.cd(site_folder):
         print('update source')
