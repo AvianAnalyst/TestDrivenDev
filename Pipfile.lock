@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c1c89defd87e2eb600293384721cdc158ba15be3dcb21bf5d443ec2d8332878e"
+            "sha256": "88eaa627c0986eceb8ecc110521de8632ddce75c0c30f1cc64dcfeea238a2ecf"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -106,13 +106,13 @@
             "index": "pypi",
             "version": "==1.11.24"
         },
-        "fabric3": {
+        "fabric": {
             "hashes": [
-                "sha256:647e485ec83f30b587862f92374d6affc217f3d79819d1d7f512e42e7ae51e81",
-                "sha256:7c5a5f2eb3079eb6bd2a69931f1ca298844c730ce3fdc68111db16e8857a0408"
+                "sha256:160331934ea60036604928e792fa8e9f813266b098ef5562aa82b88527740389",
+                "sha256:24842d7d51556adcabd885ac3cf5e1df73fc622a1708bf3667bf5927576cdfa6"
             ],
             "index": "pypi",
-            "version": "==1.14.post1"
+            "version": "==2.5.0"
         },
         "gunicorn": {
             "hashes": [
@@ -122,6 +122,14 @@
             "index": "pypi",
             "version": "==19.9.0"
         },
+        "invoke": {
+            "hashes": [
+                "sha256:c52274d2e8a6d64ef0d61093e1983268ea1fc0cd13facb9448c4ef0c9a7ac7da",
+                "sha256:f4ec8a134c0122ea042c8912529f87652445d9f4de590b353d23f95bfa1f0efd",
+                "sha256:fc803a5c9052f15e63310aa81a43498d7c55542beb18564db88a9d75a176fa44"
+            ],
+            "version": "==1.3.0"
+        },
         "paramiko": {
             "hashes": [
                 "sha256:99f0179bdc176281d21961a003ffdb2ec369daac1a1007241f53374e376576cf",
@@ -129,10 +137,17 @@
             ],
             "version": "==2.6.0"
         },
+        "patchwork": {
+            "hashes": [
+                "sha256:be5e8a52b9c604a853c9d841825b996ee084dfee3181f10e63a942d1fab2d699",
+                "sha256:c7fe2830dc3db21e51b9654772fdbe3f14cee6d42467bfceb3491891dd647b68"
+            ],
+            "index": "pypi",
+            "version": "==1.0.1"
+        },
         "pycparser": {
             "hashes": [
-                "sha256:a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3",
-                "sha256:fe3a037164f5c116c28dd43b674d0716dae97959c2c2268e89e071c1bf8b17e5"
+                "sha256:a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
             ],
             "version": "==2.19"
         },

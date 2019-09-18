@@ -9,7 +9,8 @@ selenium = "<4"
 [packages]
 django = "<1.12"
 gunicorn = "*"
-fabric3 = "*"
+fabric = "*"
+patchwork = "*"
 
 [requires]
 python_version = "3.7"
