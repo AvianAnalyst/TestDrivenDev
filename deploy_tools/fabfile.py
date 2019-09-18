@@ -1,7 +1,7 @@
 import random
 
 from fabric import task
-from patchwork.files import append, exists
+from patchwork.files import append, exists, contains
 
 
 REPO_URL = 'https://github.com/aviananalyst/testdrivendev.git'
@@ -22,17 +22,16 @@ def _get_latest_source(c, current_commit):
 
 def _create_or_update_dotenv(c):
     print('add django debug env var')
-    append('.env', 'DJANGO_DEBUG_FALSE=y')
+    append(c, '.env', 'DJANGO_DEBUG_FALSE=y')
     print('add sitename env var')
-    append('.env', f'SITENAME={c.host}')
+    append(c, '.env', f'SITENAME={c.host}')
     print('check if secret key exists')
-    current_contents = c.run('cat .env')
-    if 'DJANGO_SECRET_KEY' not in current_contents:
+    if not contains(c, '.env', 'DJANGO_SECRET_KEY'):
         print('it does not, make a new one and add it')
         new_secret = ''.join(random.SystemRandom().choices(
             'abcdefghijklmnopqrstuvwxyz0123456789', k=50
         ))
-        append('.env', f'DJANGO_SECRET_KEY={new_secret}')
+        append(c, '.env', f'DJANGO_SECRET_KEY={new_secret}')
     else:
         print('it does')
 
