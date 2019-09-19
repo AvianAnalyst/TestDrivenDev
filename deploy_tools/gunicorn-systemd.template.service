@@ -3,11 +3,11 @@ Description=Gunicorn server for DOMAIN
 
 [Service]
 Restart=on-failure
-User=kbyrd
-WorkingDirectory=/home/kbyrd/sites/DOMAIN
-EnvironmentFile=/home/kbyrd/sites/DOMAIN/.env
+User=Kylan
+WorkingDirectory=/home/Kylan/sites/DOMAIN
+EnvironmentFile=/home/Kylan/sites/DOMAIN/.env
 
-ExecStart=/home/kbyrd/.local/bin/pipenv run start
+ExecStart=/home/Kylan/.local/bin/pipenv run start
 
 [Install]
 WantedBy=multi-user.target
