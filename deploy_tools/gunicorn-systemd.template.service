@@ -5,7 +5,7 @@ Description=Gunicorn server for DOMAIN
 Restart=on-failure
 User=Kylan
 WorkingDirectory=/home/Kylan/sites/DOMAIN
-EnvironmentFile=/home/Kylan/sites/DOMAIN/.env
+EnvironmentFiles=/home/Kylan/sites/DOMAIN/.env
 
 ExecStart=/home/Kylan/.local/bin/pipenv run start
 
