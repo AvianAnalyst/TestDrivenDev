@@ -7,7 +7,7 @@ User=Kylan
 WorkingDirectory=/home/Kylan/sites/DOMAIN
 EnvironmentFiles=/home/Kylan/sites/DOMAIN/.env
 
-ExecStart=/home/Kylan/.local/bin/pipenv run start
+ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn --bind unix:/tmp/DOMAIN.socket superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
