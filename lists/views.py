@@ -1,12 +1,14 @@
 from django.core.exceptions import ValidationError
 from django.shortcuts import redirect, render
+
+from lists.forms import ItemForm
 from lists.models import Item, List
 
 
 # Create your views here.
 # TODO: Add URLS for adding a new item to an existing list via POST
 def home_page(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'form': ItemForm()})
 
 
 def view_list(request, list_id):
