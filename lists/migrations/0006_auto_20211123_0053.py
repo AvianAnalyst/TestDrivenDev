@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='item',
             name='list',
-            field=models.ForeignKey(default='', on_delete='cascade', to='lists.List'),
+            field=models.ForeignKey(default='', to='lists.List'),
         ),
     ]
