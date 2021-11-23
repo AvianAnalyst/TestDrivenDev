@@ -181,3 +181,4 @@ venv.bak/
 /static
 .env
 todos
+.envrc
