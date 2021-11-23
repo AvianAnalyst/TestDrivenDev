@@ -22,16 +22,16 @@ def _get_latest_source(c, current_commit):
 
 def _create_or_update_dotenv(c):
     print('add django debug env var')
-    append(c, '.env', 'DJANGO_DEBUG_FALSE=y')
+    append(c, '.envrc', 'DJANGO_DEBUG_FALSE=y')
     print('add sitename env var')
-    append(c, '.env', f'SITENAME={c.host}')
+    append(c, '.envrc', f'SITENAME={c.host}')
     print('check if secret key exists')
     if not contains(c, '.env', 'DJANGO_SECRET_KEY'):
         print('it does not, make a new one and add it')
         new_secret = ''.join(random.SystemRandom().choices(
             'abcdefghijklmnopqrstuvwxyz0123456789', k=50
         ))
-        append(c, '.env', f'DJANGO_SECRET_KEY={new_secret}')
+        append(c, '.envrc', f'DJANGO_SECRET_KEY={new_secret}')
     else:
         print('it does')
 
@@ -50,7 +50,7 @@ def deploy(c):
         _get_latest_source(c, current_commit)
         print('update dependencies')
         c.run('pipenv sync')
-        print('update dotenv')
+        print('update dotenvrc')
         _create_or_update_dotenv(c)
         print('collect static files')
         c.run('pipenv run collect_static')
